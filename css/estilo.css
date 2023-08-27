@@ -1,0 +1,306 @@
+body{
+    margin: 0;/* área de margem nos quatro lados do elemento*/
+}
+
+/* caixa de texto */
+.caixa-search {
+    position: absolute;/*define como um elemento é posicionado em um documento*/
+    top: 50%;/* especificação da posição vertical de um elemento posicionado*/
+    left: 1130px;
+    transform: translate(-50%, -50%);/*permite girar, dimensionar, inclinar ou traduzir um elemento*/
+    background-color: #fff;/*define a cor de fundo de um elemento*/
+    height: 40px;
+    border-radius: 40px;/*define o raio dos cantos do elemento*/
+    padding: 10px;/*criar espaço ao redor do conteúdo de um elemento, dentro de qualquer borda definida*/
+}
+
+.caixa-search:hover > .caixa-texto {
+    width: 200px;
+    padding: 0 6px;
+}
+
+.caixa-search:hover > .botao-search {
+    background-color: #fff;
+    margin-left: 3px;
+}
+
+.botao-search {
+    color: #000;
+    float: right;/*determina que um elemento deve ser retirado do seu fluxo normal e colocado ao longo do lado direito ou esquerdo do seu containêr*/
+    width: 40px;/*especifica o comportamento de exibição de um elemento*/
+    height: 40px;
+    border-radius: 50%;
+    background-color: #C0C0C0;
+    display: flex;
+    justify-content: center;/*alinha os itens do contêiner flexível quando os itens não usam todo o espaço disponível no eixo principal*/
+    text-decoration: none;/*especifica a decoração adicionada ao texto*/
+    align-items: center;/*especifica o alinhamento padrão para itens dentro do contêiner flexível*/
+    transition: 0.4s;/*altera os valores das propriedades sem problemas, durante um determinado período*/
+}
+
+.caixa-texto {
+    border: none;/*permitem que especifique o estilo, a largura e a cor da borda de um elemento*/
+    background-color:#fff;
+    outline: none;/*propriedade abreviada para configurar uma ou mais das propriedades de contorno outline-style*/
+    float: left;
+    padding: 0;
+    color: #000;
+    font-size: 16px;/*define o tamanho do texto*/
+    transition: 0.4s;
+    line-height: 40px;
+    width: 1px;
+    cursor: pointer;/*define o cursor do mouse, se houver, para mostrar quando o ponteiro do mouse estiver sobre um elemento*/
+}
+
+/*cabeçalho*/
+header{
+    position: fixed;
+    width: 97%;
+    height: 200px;
+    background-color: #8c52ff;
+    padding-right: 46px;
+	font-family: Trebuchet MS, sans-serif;/*especifica a fonte de um elemento*/
+	font-weight: bold;
+}
+
+.logoform{
+	text-align: left;
+    align-items: center;
+	margin: auto;
+    display: flex;
+    justify-content: left;
+}
+
+nav{
+    width: 30%;
+    position: absolute;
+    top: 20px;
+    left: 65%;
+    font-size: 16px
+}
+
+nav a{
+    margin-left: 46px;
+}
+
+article{
+    position: relative;
+    top: 40px;
+    z-index: 1;/*especifica a ordem da pilha de um elemento*/
+}
+
+a{
+    text-decoration:none;
+    color: rgba(255,255,255,0.67);
+}
+
+a:focus{
+    color: #fff;
+}
+
+.fil{
+    width: 200px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.menu a{
+    text-decoration: none;
+    color: grey;
+}
+
+.menu img{
+    margin: 0 20px 0 10px;
+}
+
+.fil a{
+    color: black;
+    font-weight: bold;/*define o peso (ou negrito) da fonte*/
+}
+
+@media screen and (max-width:1430px/*define a largura máxima de um elemento*/)
+{
+    header
+    {
+      width: 1500px;  
+    }
+    nav
+    {
+      width: 800px;
+      position: fixed;
+      top: 110px;
+      left:300px;
+    }
+	
+/*botão de subir*/
+.btn{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	position:fixed;
+	bottom:120px;/*afeta a posição vertical de um elemento posicionado*/
+	right:40px;
+	width:60px;
+	height:60px;
+	background-color:#8c52ff;
+	text-decoration:none;
+	border-radius:50px;
+}
+
+.btn after{
+	content:"↑";/*substitui um elemento por um valor gerado*/
+	font-size:32px;
+	font-weight:bold;
+	color:#green;
+	transition:margin-top 250ms;
+}
+
+.btn:hover::after{
+	margin-top:-8px;
+}
+
+#fundo{
+	width:100%;
+	height:600px;
+	background:#c0c0c0;
+}
+
+#titulo{
+	font-family:Verdana, sans-serif;
+	color:#8c52ff;
+}
+
+#texto{
+	font-family:Helvetica, sans-serif;
+	color: #000;
+	font-size:20px;
+	margin-left:35px;
+}
+
+#imagens{
+	margin-left:40px;
+}
+
+#img1{
+	margin-left:20px;
+	border-radius: 30%;
+	-webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+	-moz-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+	box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);/*adicionar efeitos de sombra em volta de um elemento*/
+	
+}
+
+#img2{
+	margin-left:300px;
+	border-radius: 30%;
+	-webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+	-moz-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+	box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+}
+
+#img3{
+    margin-left:300px;
+	border-radius: 30%;
+	-webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+	-moz-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+	box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+}
+
+#img4{
+    margin-left:200px;
+	border-radius: 30%;
+	-webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+	-moz-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+	box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+}
+
+#img5{
+    border-radius: 10%;
+}
+
+#loja{
+	margin-left:710px;
+	margin-top:-600px;
+}
+
+#fundo1{
+	width:100%;
+	height:800px;
+	background:#0752ba;
+}
+
+#titulo2{
+	font-family:Verdana, sans-serif;
+	color:#fff;
+}
+
+#img6{
+    margin-left:100px;
+}
+
+#img7{
+	margin-left:320px;
+}
+
+#img8{
+    margin-left:100px;
+}
+
+#img9{
+    margin-left:320px;
+}
+
+#fundo3{
+	width:100%;
+	height:500px;
+	background:#c0c0c0;
+}
+
+#titulo3{
+	font-family:Verdana, sans-serif;
+	color:#8c52ff;
+}
+
+#subtitulo1{
+	font-family:Verdana, sans-serif;
+	color:#000;
+	margin-left:15px;
+}
+
+#img11{
+    margin-left:20px;
+}
+
+#img12{
+    margin-left:50px;
+}
+
+#img13{
+    margin-left:50px;
+}
+
+#titulo4{
+	font-family:Verdana, sans-serif;
+	color:#8c52ff;
+}
+
+#footer {
+	width:95%;
+	height:150px;
+	display:flex;
+	align-items:center;
+	padding:2em;
+	position:absolute;
+	justify-content:center;
+	background-color:#8c52ff;
+	font-family:Verdana, sans-serif;
+	color:#fff;
+}
+
+.footer h5{
+	float:center;
+    color:#fff;
+}
